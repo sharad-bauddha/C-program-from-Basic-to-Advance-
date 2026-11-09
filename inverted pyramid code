@@ -12,3 +12,14 @@ int main() {
         cout << endl;
     }
 }
+
+
+
+/<How the Code Works/>
+
+Outer Loop (row from 1 to 7): Controls the total number of rows/lines in the pyramid,
+executing exactly 7 times. First Inner Loop (col from 1 to row - 1): Responsible for printing
+the leading spaces on each line. The number of spaces increases by 1 with each consecutive
+row (starting with 0 spaces on the first line). Second Inner Loop (col from 1 to 2 * (7 - row) +
+1): Responsible for printing the asterisks. The formula ensures the number of stars decreases
+by 2 for each subsequent row, starting from 13 down to 1.
