@@ -1,0 +1,38 @@
+# C-program-from-Basic-to-Advance-
+c++ Notes
+#include <bits/stdc++.h>
+#include <list>
+using namespace std;
+
+int main() { 
+    list<int>mylist;
+   
+    mylist.push_back(2);
+     mylist.push_back(4);
+      mylist.push_back(6);
+      mylist.push_front(1);
+       cout<<mylist.size()<<endl;
+      
+       mylist.push_back(7);
+        mylist.push_back(9);  
+     // mylist.pop_front();
+     // mylist.pop_back();
+      // mylist.clear();
+      cout<<mylist.back()<<endl;
+      cout<<mylist.front()<<endl;
+      cout<<mylist.size()<<":"
+;     if(mylist.empty()==true){
+           cout<<" emptu List"<<endl;
+       }
+       else {cout<<"filled list"<<'\n';}
+       list<int> ::iterator it=mylist.begin();
+       while(it!=mylist.end()){
+           cout<<*it<<":";
+           it++;}cout<<endl;
+           mylist.remove(9);
+            list<int> ::iterator it1=mylist.begin();
+       while(it1!=mylist.end()){
+           cout<<*it1<<":";
+           it1++;
+       }
+}
