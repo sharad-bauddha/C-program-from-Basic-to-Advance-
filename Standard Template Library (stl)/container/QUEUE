@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+#include <queue> 
+using namespace std;
+
+int main() { 
+   queue<int> w;
+   queue<int> x;
+   w.push(9);
+   w.push(5);
+   w.push(1);
+   w.push(2);
+   w.push(4);
+   
+   x.push(41);
+   x.push(45);
+   x.push(43);
+   x.push(48);
+   x.push(46);
+   w.swap(x);
+   cout<<w.front()<<endl;
+    cout<<w.back()<<endl;
+ //  w.pop();
+   
+   // w.clear(); such type of things are not in queue.
+    cout<<w.size();
+    if(w.empty()==true){
+        cout<<"it is empty"<<" ";
+    }
+    else {cout<<"it  is not empty"<<" ";}
+    
+    cout<<w.front()<<endl;
+    cout<<w.back();
+    
+}
+     
