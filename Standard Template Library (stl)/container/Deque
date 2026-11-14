@@ -1,0 +1,53 @@
+#include <iostream>
+#include <deque>
+
+using namespace std;
+
+int main() {
+    deque<int> dq;
+
+    cout << "Initially empty? " << (dq.empty() ? "Yes" : "No") << endl;
+
+    dq.push_back(10);
+    dq.push_back(20);
+    dq.push_front(5);
+    dq.push_front(1);
+
+    cout << "Size after insertions: " << dq.size() << endl;
+
+    cout << "Front element: " << dq.front() << endl;
+    cout << "Back element: " << dq.back() << endl;
+
+    cout << "Element at index 1 using []: " << dq[1] << endl;
+    cout << "Element at index 2 using at(): " << dq.at(2) << endl;
+
+    cout << "Deque elements: ";
+    for (auto it = dq.begin(); it != dq.end(); ++it) {
+        cout << *it << " ";
+    }
+    cout << endl;
+
+    dq.insert(dq.begin() + 2, 99);
+
+    dq.pop_front();
+    dq.pop_back();
+
+    dq.erase(dq.begin() + 1);
+    
+    dq.push_back(30);
+    dq.push_back(40);
+    dq.erase(dq.begin() + 1, dq.begin() + 3);
+
+    deque<int> other_dq = {100, 200, 300};
+    dq.swap(other_dq);
+
+    cout << "dq after swap: ";
+    for (int val : dq) cout << val << " ";
+    cout << endl;
+
+    dq.clear();
+    cout << "Size after clear(): " << dq.size() << endl;
+    cout << "Empty after clear()? " << (dq.empty() ? "Yes" : "No") << endl;
+
+    return 0;
+}
